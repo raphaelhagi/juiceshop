@@ -309,7 +309,7 @@ app.use('/api/Feedbacks/:id', insecurity.isAuthorized())
 app.get('/api/Users', insecurity.isAuthorized())
 app.route('/api/Users/:id')
   .get(insecurity.isAuthorized())
-  .put(insecurity.denyAll()) // Updating users is forbidden to make the password change challenge harder
+  .put(insecurity.denyAll())
   .delete(insecurity.denyAll()) // Deleting users is forbidden entirely to keep login challenges solvable
 /* Products: Only GET is allowed in order to view products */
 app.post('/api/Products', insecurity.isAuthorized())
