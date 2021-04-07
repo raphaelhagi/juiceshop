@@ -97,7 +97,6 @@ describe('/rest/products/search', () => {
       .expect('json', 'data.?', {
         id: 3,
         price: 'bender@' + config.get('application.domain')
-        // no check for Bender's password as it might have already been changed by different test
       })
       .expect('json', 'data.?', {
         id: 4,
